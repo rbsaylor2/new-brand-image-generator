@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="sku">
+  <select id="brand">
+    <option value="rocky">rockyboots</option>
+    <option value="georgia">georgiaboots</option>
+    <option value="lss">LSS</option>
+    <option value="durango">durango</option>
+    <option value="lo">LO</option>
+    <option value="_slipgrips">slipgrips</option>
+    <option value="4eursole">4eursole</option>
+    <option value="customfit">customfit</option>
+    <option value="zzz_converse">converse</option>
+    <option value="tingley">tingley</option>
+    <option value="xtratuf">xtratuf</option>
+    <option value="tony-lama">tony-lama</option>
+    <option value="spring-step">spring-step</option>
+    <option value="timberland">timberland</option>
+    <option value="thorogood">thorogood</option>
+    <option value="steelblue">steelblue</option>
+    <option value="terra">terra</option>
+    <option value="spenco">spenco</option>
+    <option value="stanley">stanley</option>
+    <option value="smoky-mountain-boots">smoky-mountain-boots</option>
+    <option value="skidbuster">skidbuster</option>
+    <option value="sketchers">sketchers</option>
+    <option value="sanita">sanita</option>
+    <option value="servus">servus</option>
+    <option value="royer">royer</option>
+    <option value="rockport-works">rockport-works</option>
+    <option value="refrigiwear">refrigiwear</option>
+    <option value="ranger">ranger</option>
+    <option value="puma">puma</option>
+    <option value="reebok">reebok</option>
+    <option value="nurse-mates">nurse-mates</option>
+    <option value="oliver">oliver</option>
+    <option value="original-swat">original-swat</option>
+    <option value="nautilus">nautilus</option>
+    <option value="moxie-trades">moxie-trades</option>
+    <option value="muck">muck</option>
+    <option value="mcrae-industrial">mcrae-industrial</option>
+    <option value="mellow-walk">mellow-walk</option>
+    <option value="michelin">michelin</option>
+    <option value="kodiak">kodiak</option>
+    <option value="maxx-dry">maxx-dry</option>
+    <option value="justin-original-workboots">justin-original-workboots</option>
+    <option value="laredo">laredo</option>
+    <option value="keen">keen</option>
+    <option value="knapp">knapp</option>
+    <option value="john-deere">john-deere</option>
+    <option value="impacto">impacto</option>
+    <option value="iron-age">iron-age</option>
+    <option value="genuine-grip">genuine-grip</option>
+    <option value="grabbers">grabbers</option>
+    <option value="florsheim-work">florsheim-work</option>
+    <option value="footguard">footguard</option>
+    <option value="fila">fila</option>
+    <option value="dickies">dickies</option>
+    <option value="florsheim">florsheim</option>
+    <option value="dr-scholls">dr-scholls</option>
+    <option value="dingo">dingo</option>
+    <option value="dawgs">dawgs</option>
+    <option value="dr-martens">dr-martens</option>
+    <option value="dan-post-boots">dan-post-boots</option>
+    <option value="crocs">crocs</option>
+    <option value="cherokee">cherokee</option>
+    <option value="chippewar-boots">chippewar-boots</option>
+    <option value="carhartt">carhartt</option>
+    <option value="bulwark-fr">bulwark-fr</option>
+    <option value="blundstone">blundstone</option>
+    <option value="black-diamond">black-diamond</option>
+    <option value="baffin">baffin</option>
+    <option value="ariat">ariat</option>
+    <option value="berne">berne</option>
+    <option value="avenger">avenger</option>
+    <option value="alegria">alegria</option>
+  </select>
+  <button id="submit">Submit</button>
+  <img id="img-preview" src="http://placehold.it/150x150" alt="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('#submit').click(function(){
+      var cloudinary = 'http://res.cloudinary.com/dkibvchaf/image/fetch/w_400,c_fill,g_auto,e_make_transparent/e_trim/w_940,h_788,c_lpad,x_120,y_100/l_'
+      var imgPreview = $('#img-preview');
+      var skuUpload = $('#sku').val();
+      var brand = $('#brand').find(":selected").val();
+      console.log(imgPreview);
+      console.log(skuUpload);
+      console.log(brand);
+      var newSrc = cloudinary + brand + ',w_200,c_scale,g_north_east,x_180,y_60/http://sitemanager.rockyboots.com/ProductImages/Lehigh-old/individual/'+skuUpload+'_reg_enl.jpg';
+      imgPreview.attr('src', newSrc)
+    })
+  });
+  </script>
+</body>
+</html>
