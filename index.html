@@ -81,12 +81,12 @@
     <option value="alegria">alegria</option>
   </select>
   <button id="submit">Submit</button>
-  <img id="img-preview" src="http://placehold.it/150x150" alt="">
+  <img id="img-preview" src="https://placehold.it/150x150" alt="">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
   $(document).ready(function() {
     $('#submit').click(function(){
-      var cloudinary = 'http://res.cloudinary.com/dkibvchaf/image/fetch/w_400,c_fill,g_auto,e_make_transparent/e_trim/w_940,h_788,c_lpad,x_120,y_100/l_'
+      var cloudinary = 'https://res.cloudinary.com/dkibvchaf/image/fetch/w_400,c_fill,g_auto,e_make_transparent/e_trim/w_940,h_788,c_lpad,x_120,y_100/l_'
       var imgPreview = $('#img-preview');
       var skuUpload = $('#sku').val();
       var brand = $('#brand').find(":selected").val();
