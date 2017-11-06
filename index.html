@@ -88,12 +88,12 @@
     $('#submit').click(function(){
       var cloudinary = 'https://res.cloudinary.com/dkibvchaf/image/fetch/w_700,c_fill,g_auto,e_make_transparent/e_trim/w_940,h_788,c_lpad,x_-50,y_00/l_'
       var imgPreview = $('#img-preview');
-      var skuUpload = $('#sku').val();
+      var skuUpload = $('#sku').val().toLowerCase();
       var brand = $('#brand').find(":selected").val();
       console.log(imgPreview);
       console.log(skuUpload);
       console.log(brand);
-      var newSrc = cloudinary + brand + ',w_200,c_scale,g_north_east,x_150,y_100/http://lehighoutfitters.com/on/demandware.static/-/Sites-Master-Product-catalog-en/default/dw33175178/images/'+skuUpload+'_EXTRALARGE.jpg';
+      var newSrc = cloudinary + brand + ',w_200,c_scale,g_north_east,x_150,y_100/https://d1jdomzv2hp689.cloudfront.net/productimages/lehigh-old/individual/'+skuUpload+'_reg_enl.jpg';
       imgPreview.attr('src', newSrc)
     })
   });
